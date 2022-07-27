@@ -7,15 +7,13 @@
 //VMS theme
 @import "@arco-themes/react-g7vms";
 
-@import (css) url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap');
-
 @font-family: 'IBM Plex Sans', sans-serif;
 @font-size-body: 16px;
 
 #root {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   right: 0;
   bottom: 1px;
   display: flex;
@@ -41,15 +39,15 @@
 	justify-content: center;
   }
 
-  .app-workspace{
+  .app-workspace {
 
-	.arco-page-header-head{
+	.arco-page-header-head {
 	  margin-top: 1ch;
 	  padding-top: 1ch;
 	  border-top: dashed 1px var(--color-text-4);
 	}
 
-	.app-content>main{
+	.app-content > main {
 	  margin: 12px 24px 0;
 	  padding: 12px;
 	  background: var(--color-bg-1);
@@ -69,4 +67,59 @@
 	padding: 0 24px;
   }
 
+  .cards-grid {
+	display: grid;
+	grid-gap: 7px;
+
+	.card-item {
+	  //min-width: calc((100%/4) - 0px);
+	  //margin-bottom: 7px;
+	  //margin-right: 7px;
+	}
+
+	.card-item:not(:last-child) {
+	}
+
+	.card-item-danger {
+	  background-color: lighten(crimson, 40%);
+	}
+  }
+}
+
+.card-item .icon-hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: all 0.1s;
+}
+
+.card-item .icon-hover:hover {
+  background-color: rgb(var(--gray-2));
+}
+
+@media all and (min-width: 610px) and (max-width: 960px) {
+  .cards-grid {
+	grid-template-columns: repeat(auto-fill, 100%) !important;
+  }
+}
+
+@media all and (min-width: 960px) and (max-width: 1280px) {
+  .cards-grid {
+	grid-template-columns: repeat(3, calc(100% / 3 - 5px)) !important;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1600px) {
+  .cards-grid {
+	grid-template-columns: repeat(4, calc(100% / 4 - 5px)) !important;
+  }
+}
+
+@media all and (min-width: 1600px) {
+  .cards-grid {
+	grid-template-columns: repeat(6, calc(100% / 6 - 6px)) !important;
+  }
 }

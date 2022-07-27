@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 import {useOutletContext} from 'umi';
 
-export default () =>
+const Page404 = () =>
 {
     const {setTitle, setSubTitle} = useOutletContext();
 
@@ -13,3 +13,5 @@ export default () =>
 
     return <div>Content of pages/404.js</div>;
 };
+
+export default Page404;
