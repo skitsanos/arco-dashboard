@@ -1,0 +1,7 @@
+# Local Netlify folder
+.netlify
+.idea/
+dist/
+node_modules/
+**/.umi*/
+*.lock

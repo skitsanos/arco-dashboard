@@ -1,0 +1,72 @@
+//Default theme
+//@import "@arco-design/web-react/dist/css/index.less";
+
+//Purple theme with rounded corners
+//@import "@arco-themes/react-juzi001";
+
+//VMS theme
+@import "@arco-themes/react-g7vms";
+
+@import (css) url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+
+@font-family: 'IBM Plex Sans', sans-serif;
+@font-size-body: 16px;
+
+#root {
+  position: absolute;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 1px;
+  display: flex;
+}
+
+.debug {
+  background-color: lighten(limegreen, 40%);
+  backdrop-filter: opacity(0.3);
+}
+
+.dashed-bottom {
+  border-bottom-style: dashed;
+}
+
+.app-layout {
+  background: var(--color-fill-2);
+
+  .logo {
+	height: 50px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+
+  .app-workspace{
+
+	.arco-page-header-head{
+	  margin-top: 1ch;
+	  padding-top: 1ch;
+	  border-top: dashed 1px var(--color-text-4);
+	}
+
+	.app-content>main{
+	  margin: 12px 24px 0;
+	  padding: 12px;
+	  background: var(--color-bg-1);
+	  border-radius: 7px;
+
+	  border-top: solid 2px var(--color-text-4);
+	  border-bottom: solid 2px var(--color-text-4);
+	}
+  }
+
+  .arco-layout-footer {
+	color: var(--color-text-2);
+	height: 48px;
+	line-height: 48px;
+	font-weight: 400;
+	font-size: 14px;
+	padding: 0 24px;
+  }
+
+}

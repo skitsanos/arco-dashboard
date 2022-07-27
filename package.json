@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "postinstall": "umi setup",
+    "dev": "umi dev",
+    "build": "umi build"
+  },
+  "dependencies": {
+    "@arco-design/web-react": "^2.37.2",
+    "@arco-themes/react-g7vms": "^0.0.4",
+    "@arco-themes/react-juzi001": "^0.0.1",
+    "ahooks": "^3.5.2",
+    "init": "^0.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "umi": "^4.0.8"
+  }
+}
