@@ -10,7 +10,9 @@
 
     Typebot.initBubble({
         url: 'https://viewer.typebot.io/skitsanos-intro',
-        button: {color: '#0042DA'},
+        button: {
+            color: 'rgb(var(--primary-6))'
+        },
         hiddenVariables: {
             '$country': result.headers['x-country'],
             '$language': result.headers['x-language'],
