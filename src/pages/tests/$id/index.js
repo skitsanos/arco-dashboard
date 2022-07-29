@@ -19,6 +19,7 @@ export default () =>
     }, []);
 
     //https://ace.c9.io/#nav=howto
+    //https://ace.c9.io/#nav=higlighter
 
     return <>
         <AceEditor name={`editor-${uid}`}
@@ -29,11 +30,10 @@ export default () =>
                    showGutter={true}
                    showPrintMargin={true}
                    setOptions={{
-                       useWorker: false,
-                       fontFamily: 'IBM Plex Mono'
+                       useWorker: false, fontFamily: 'IBM Plex Mono'
                    }}
                    mode={'json'}
                    editorProps={{}}
                    defaultValue={'{\n\t"demo": true\n}'}/>
     </>;
-}
+};
