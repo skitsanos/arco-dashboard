@@ -1,14 +1,18 @@
-import {useEffect, useId} from 'react';
+import {useEffect, useId, useRef} from 'react';
 import AceEditor from 'react-ace';
 
 import 'ace-builds/src-noconflict/mode-json';
+import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/theme-tomorrow';
 import {useOutletContext, useParams} from 'umi';
+
+window['ace'].config.set('workerPath', '/ace/');
 
 export default () =>
 {
     const uid = useId();
     const {id} = useParams();
+    const ref = useRef();
 
     const {setTitle, setSubTitle} = useOutletContext();
 
@@ -18,11 +22,19 @@ export default () =>
         setSubTitle(id);
     }, []);
 
+    const codeChanged = v =>
+    {
+        const {editor} = ref.current;
+        const annotation_lists = editor.getSession().getAnnotations();
+        console.log(annotation_lists)
+    };
+
     //https://ace.c9.io/#nav=howto
     //https://ace.c9.io/#nav=higlighter
 
     return <>
         <AceEditor name={`editor-${uid}`}
+                   ref={ref}
                    width={'100%'}
                    height={'100%'}
                    theme={'tomorrow'}
@@ -30,10 +42,12 @@ export default () =>
                    showGutter={true}
                    showPrintMargin={true}
                    setOptions={{
-                       useWorker: false, fontFamily: 'IBM Plex Mono'
+                       useWorker: true,
+                       fontFamily: 'IBM Plex Mono'
                    }}
-                   mode={'json'}
+                   mode={'javascript'}
                    editorProps={{}}
-                   defaultValue={'{\n\t"demo": true\n}'}/>
+                   defaultValue={'{\n\t"demo": true\n}'}
+                   onChange={codeChanged}/>
     </>;
 };

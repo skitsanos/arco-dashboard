@@ -3,5 +3,6 @@
 .idea/
 dist/
 node_modules/
+public/ace/
 **/.umi*/
 *.lock

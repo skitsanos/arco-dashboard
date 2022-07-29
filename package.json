@@ -2,7 +2,9 @@
   "scripts": {
     "postinstall": "umi setup",
     "dev": "umi dev",
-    "build": "umi build"
+    "build": "umi build",
+    "deploy": "netlify deploy",
+    "deploy:prod": "netlify deploy --prod"
   },
   "dependencies": {
     "@arco-design/web-react": "^2.37.2",

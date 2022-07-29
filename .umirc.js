@@ -25,9 +25,9 @@ export default {
     },
 
     copy: [
-   /*     {
+        {
             from: 'node_modules/ace-builds/src-min-noconflict',
             to: 'public/ace'
-        }*/
+        }
     ]
 };
