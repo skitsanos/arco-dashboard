@@ -2,7 +2,8 @@ export default {
     title: 'Arco Design demo app',
 
     styles: [
-        'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap'
+        'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap',
+        'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap'
     ],
 
     headScripts: [
@@ -21,5 +22,12 @@ export default {
             target: 'https://api.skitsanos.com/',
             changeOrigin: true
         }
-    }
+    },
+
+    copy: [
+   /*     {
+            from: 'node_modules/ace-builds/src-min-noconflict',
+            to: 'public/ace'
+        }*/
+    ]
 };
