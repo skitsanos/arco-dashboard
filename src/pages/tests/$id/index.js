@@ -24,6 +24,9 @@ export default () =>
 
     const codeChanged = v =>
     {
+        //https://stackoverflow.com/questions/9506154/determine-if-javascript-syntax-is-valid-in-change-handler-of-ace
+        //https://stackoverflow.com/questions/30974520/how-to-integrate-syntax-check-in-ace-editor-using-custom-mode
+
         const {editor} = ref.current;
         const annotation_lists = editor.getSession().getAnnotations();
         console.log(annotation_lists)
@@ -45,7 +48,7 @@ export default () =>
                        useWorker: true,
                        fontFamily: 'IBM Plex Mono'
                    }}
-                   mode={'javascript'}
+                   mode={'json'}
                    editorProps={{}}
                    defaultValue={'{\n\t"demo": true\n}'}
                    onChange={codeChanged}/>
