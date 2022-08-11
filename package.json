@@ -1,4 +1,7 @@
 {
+  "name": "arco-template",
+  "description": "Template of the web application with arco.design UI components",
+  "license": "MIT",
   "scripts": {
     "postinstall": "umi setup",
     "dev": "umi dev",
@@ -10,10 +13,12 @@
     "@arco-design/web-react": "^2.37.2",
     "@arco-themes/react-g7vms": "^0.0.4",
     "@arco-themes/react-juzi001": "^0.0.1",
+    "@codemirror/lang-javascript": "^6.0.2",
+    "@codemirror/state": "^6.1.1",
     "ahooks": "^3.5.2",
+    "codemirror": "^6.0.1",
     "init": "^0.1.2",
     "react": "^18.2.0",
-    "react-ace": "^10.1.0",
     "react-dom": "^18.2.0",
     "umi": "^4.0.9"
   },

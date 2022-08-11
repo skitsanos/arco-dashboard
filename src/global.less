@@ -6,6 +6,7 @@
 
 //VMS theme
 @import "@arco-themes/react-g7vms";
+//@import (css) "~codemirror/dist/";
 
 @font-family: 'IBM Plex Sans', sans-serif;
 @font-size-body: 16px;
@@ -15,12 +16,32 @@
   text-transform: uppercase;
 }
 
-.ace_gutter{
+.ace_gutter {
   background-color: #fdfdfd !important;
 }
 
-.ace_cursor{
+.ace_cursor {
   background-color: ligten(purple, 40%);
+}
+
+.code-editor {
+  flex: 1;
+  //border: dashed 1px red;
+  height: 100%;
+  position: relative;
+
+  .cm-editor {
+	position: absolute !important;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	//overflow: auto !important;
+  }
+
+  .cm-scroller {
+	font-family: 'IBM Plex Mono', Monaco, monospace;
+  }
 }
 
 #root {
