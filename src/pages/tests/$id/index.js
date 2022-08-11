@@ -1,5 +1,5 @@
 import CodeEditor from '@/components/CodeEditor';
-import {useEffect, useId, useRef} from 'react';
+import {useEffect} from 'react';
 
 import {useOutletContext, useParams} from 'umi';
 

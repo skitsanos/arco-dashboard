@@ -1,5 +1,5 @@
 import {javascript} from '@codemirror/lang-javascript';
-import {EditorState, StateField} from '@codemirror/state';
+import {EditorState} from '@codemirror/state';
 
 import {EditorView} from '@codemirror/view';
 import {basicSetup} from 'codemirror';

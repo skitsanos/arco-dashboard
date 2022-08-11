@@ -15,6 +15,7 @@
     "@arco-themes/react-juzi001": "^0.0.1",
     "@codemirror/lang-javascript": "^6.0.2",
     "@codemirror/state": "^6.1.1",
+    "@codemirror/view": "^6.2.0",
     "ahooks": "^3.5.2",
     "codemirror": "^6.0.1",
     "init": "^0.1.2",
