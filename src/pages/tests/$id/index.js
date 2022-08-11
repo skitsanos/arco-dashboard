@@ -5,9 +5,7 @@ import {useOutletContext, useParams} from 'umi';
 
 export default () =>
 {
-    const uid = useId();
     const {id} = useParams();
-    const ref = useRef();
 
     const {setTitle, setSubTitle} = useOutletContext();
 
@@ -17,8 +15,8 @@ export default () =>
         setSubTitle(id);
     }, []);
 
-
     return <>
-        <CodeEditor onChange={()=>{}}/>
+        <CodeEditor value={`console.log("hello there (${id})?!");\n`}
+                    onChange={data => console.log(data)}/>
     </>;
 };

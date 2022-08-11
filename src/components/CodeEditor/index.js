@@ -5,7 +5,7 @@ import {EditorView} from '@codemirror/view';
 import {basicSetup} from 'codemirror';
 import {useEffect, useRef, useState} from 'react';
 
-const CodeEditor = ({autoFocus, readOnly, onChange}) =>
+const CodeEditor = ({autoFocus, readOnly, onChange, value}) =>
 {
     const ref = useRef();
 
@@ -18,7 +18,6 @@ const CodeEditor = ({autoFocus, readOnly, onChange}) =>
         {
             const theme = EditorView.theme({
                 '&': {
-                    //height: '600px',
                     fontSize: '14px',
                     font: '\'IBM Plex Mono\', monospace !important'
                 },
@@ -45,7 +44,7 @@ const CodeEditor = ({autoFocus, readOnly, onChange}) =>
             });
 
             const state = EditorState.create({
-                doc: 'console.log("hello there?!");\n',
+                doc: value,
                 extensions: [
                     theme,
                     updatesTracker,
@@ -97,7 +96,8 @@ const CodeEditor = ({autoFocus, readOnly, onChange}) =>
 
 CodeEditor.defaultProps = {
     autoFocus: false,
-    readOnly: false
+    readOnly: false,
+    value: ''
 };
 
 export default CodeEditor;
