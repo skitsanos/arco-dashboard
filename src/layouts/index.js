@@ -4,7 +4,7 @@ import {ReactComponent as AppLogo} from '@/components/Icons/logo.svg';
 import {Button, Layout, Menu, PageHeader} from '@arco-design/web-react';
 import {
     IconCaretLeft,
-    IconCaretRight,
+    IconCaretRight, IconCommand,
     IconHome,
     IconSelectAll,
     IconSettings,
@@ -63,6 +63,8 @@ const layouts = () =>
                     <MenuItem key="4_2">Menu 2</MenuItem>
                     <MenuItem key="4_3">Menu 3</MenuItem>
                 </SubMenu>
+
+                <MenuItem key={'/terminal'}><IconCommand/>Terminal</MenuItem>
             </Menu>
         </Sider>
 
