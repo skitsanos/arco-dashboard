@@ -26,7 +26,7 @@
 }
 
 .app-terminal {
-  border: dashed 1px red;
+  //border: dashed 1px red;
   height: 100%;
   position: relative;
 
@@ -42,6 +42,15 @@
 	color: #efefef;
 	font-family: @font-family-mono;
 	font-size: 14px;
+
+	> div:first-of-type {
+	  color: #999;
+	}
+  }
+
+  .p-terminal-prompt {
+	color: #eaeadf;
+	font-weight: bold;
   }
 }
 
