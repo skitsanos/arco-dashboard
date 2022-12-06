@@ -11,7 +11,8 @@
     "dev": "umi dev",
     "build": "umi build",
     "deploy": "netlify deploy",
-    "deploy:prod": "netlify deploy --prod"
+    "deploy:prod": "netlify deploy --prod",
+    "preview": "umi preview --port 3000"
   },
   "dependencies": {
     "@arco-design/web-react": "^2.37.2",
