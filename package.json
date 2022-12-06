@@ -2,6 +2,10 @@
   "name": "arco-template",
   "description": "Template of the web application with arco.design UI components",
   "license": "MIT",
+  "author": {
+    "name": "skitsanos",
+    "url": "https://github.com/skitsanos"
+  },
   "scripts": {
     "postinstall": "umi setup",
     "dev": "umi dev",
@@ -23,7 +27,7 @@
     "primereact": "^8.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "umi": "^4.0.17"
+    "umi": "^4.0.34"
   },
   "devDependencies": {
     "chance": "^1.1.8"
