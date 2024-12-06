@@ -27,7 +27,7 @@
     "init": "^0.1.2",
     "primereact": "^10.0.1",
     "react": "^19.0.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^19.0.0",
     "umi": "^4.0.34"
   },
   "devDependencies": {
